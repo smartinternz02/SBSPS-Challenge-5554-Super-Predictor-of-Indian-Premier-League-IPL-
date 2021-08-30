@@ -6,4 +6,6 @@ This project consists of a dashboard along with a website which is connected to 
 
 The website folder consists of all the code used to make the website. The API Keys have been redacted and replaced with {{ API_KEY }} to prevent a security threat due to the exposing of the keys.
 
-The repository also consists of the PDF of the dashboard that was made. The youtube video link for the demonstration is [here.](https://www.youtube.com/watch?v=l_tG6Z6zT-w)
+The repository also consists of the PDF of the dashboard that was made. The Youtube video link for the demonstration is [here.](https://www.youtube.com/watch?v=l_tG6Z6zT-w)
+
+The website with the predictor is hosted online on IBM Cloud Foundry. The website can be accessed by clicking [here.](https://predictor-ipl-impressive-nyala-hu.eu-gb.mybluemix.net/)
