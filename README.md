@@ -4,7 +4,7 @@ This project consists of a dashboard along with a website which is connected to 
 
 ## Info
 
-The website folder consists of all the code used to make the website. The API Keys have been redacted and replaced with {{ API_KEY }} to prevent a security threat due to the exposing of the keys.
+The website folder consists of all the code used to make the website. The API Keys, User ID and Passwords have been redacted and replaced with {{ API_KEY }}, {{ UID }} and {{ PASSWORD }} to prevent a security threat due to the exposing of the keys and user details.
 
 The repository also consists of the PDF of the dashboard that was made. The Youtube video link for the demonstration is [here.](https://www.youtube.com/watch?v=l_tG6Z6zT-w)
 
