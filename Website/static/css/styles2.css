@@ -1,0 +1,36 @@
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: #121212;
+    position: relative;
+    overflow: hidden ;
+}
+
+.box {
+    height:fit-content;
+    border-radius: 10px;
+}
+
+.box-content {
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    max-width: 590px;
+    max-height: 420px;
+  }
+
+.title{
+    text-align: center;
+    font-size: xx-large;
+    color: white;
+}
+h1 span{
+    background-color:  darkblue;
+    padding:20px;
+    border-radius: 15px;
+}
+

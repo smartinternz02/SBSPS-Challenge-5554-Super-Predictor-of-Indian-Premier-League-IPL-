@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+  <script src="{{ url_for('static', filename='/js/script.js') }}"></script>
+  <script src="{{ url_for('static', filename='/js/hero.1.0.0.js') }}"></script>
+  <script src="{{ url_for('static', filename='/js/fusion.1.0.0.js') }}"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='/css/styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='/css/styles1.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <nav class="navbar sticky-top navbar-dark bg-dark" >
+    <div class=" container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="{{ url_for('static', filename='logo.svg') }}" alt="" width="24" height="30"
+          class="d-inline-block align-text-top">
+        Win Predictor
+      </a>
+    </div>
+
+  </nav>
+  <title>Homepage</title>
+</head>
+
+<body style="background-color: #101626;">
+
+
+
+  <!-- /////////////////////// -->
+  <!-- Player -->
+  <div class="wrapper" style="position: relative; width: 100%; height: 90%; ">
+    <div id="player" class="fusion--player" style="width: 100%; height: 90%; " >
+      <div class="fusion--viewport" > 
+        <div class="fusion--scene fusion--scene--default scene-guid_1f98ed80_fedd_4d93_8384_0786baf53f7e" >
+          <div class="fusion--scene--content" >
+            <div id="circle_main" class="hero-element circle_main">
+              <p id="text1" >IPL</p>
+              <form action='/city' method="GET" style="display: flex; position: relative;">
+              <button type="submit" class="btn btn-dark btn-lg" style="position: relative; font-size: xx-large; font-family: 'Rubik', sans-serif;" onclick="">Click to use Predictor</button>
+                </form>
+            </div>
+            <div id="circle_1" class="hero-element circle">
+              <p id="text1">Number of Balls</p>
+              <div class="showext" style="position: relative;">
+                <p id="text4_ext" style="display: flex; position: relative">179,078</p>
+              </div>
+            </div>
+            <div id="circle_2" class="hero-element circle">
+              <p id="text2">Smallest total defended</p>
+              <div class="showext" style="position: relative;">
+                <p id="text4_ext" style="display: flex; position: relative"> Chennai Super Kings defended 116 against KXIP</p>
+              </div>
+            </div>
+            <div id="circle_3" class="hero-element circle">
+              <p id="text3">Most runs scored by a team</p>
+              <div class="showext" style="position: relative;">
+                <p id="text4_ext" style="display: flex; position: relative">Mumbai Indians - 29,809</p>
+              </div>
+            </div>
+            <div id="circle_4" class="hero-element circle">
+              <p id="text4">Total wickets</p>
+              <div class="showext" style="position: relative;">
+                <p id="text4_ext" style="display: flex; position: relative">8,834</p>
+              </div>
+            </div>
+            <div id="circle_5" class="hero-element circle">
+              <p id="text5">Total runs</p>
+              <div class="showext" style="position: relative;">
+                <p id="text4_ext" style="display: flex; position: relative">235,290</p>
+              </div>
+            </div>
+            <div id="circle_6" class="hero-element circle">
+              <p id="text6">Most Man of the matches award</p>
+              <div class="showext" style="position: relative;">
+                <p id="text4_ext" style="display: flex; position: relative">Chris Gayle </p>
+              </div>
+            </div>
+            <div id="circle_7" class="hero-element circle">
+              <p id="text7">Biggest successful run-chase</p>
+              <div class="showext" style="position: relative;">
+                <p id="text4_ext" style="display: flex; position: relative"> Mumbai Indians </p>
+              </div>
+            </div>
+            <div id="circle_8" class="hero-element circle">
+              <p id="text8">Number of Balls</p>
+              <div class="showext" style="position: relative;">
+                <p id="text4_ext" style="display: flex; position: relative"> 179,078</p>
+              </div>
+            </div>
+            <div id="circle_9" class="hero-element circle">
+              <p id="text9">Number of Games</p>
+              <div class="showext" style="position: relative;">
+                <p id="text4_ext" style="display: flex; position: relative">756 </p>
+              </div>
+            </div>
+            <div id="circle_10" class="hero-element circle">
+              <p id="text10">No. of Seasons</p>
+              <div class="showext" style="position: relative;">
+                <p id="text4_ext" style="display: flex; position: relative">12</p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+  <!-- Hero/Fusion Player -->
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      window.player = new fusion.Player({
+        id: 'player',
+        // debug: true, 
+        scenes: [
+
+          {
+            id: 'guid_1f98ed80_fedd_4d93_8384_0786baf53f7e',
+            type: 'flat',
+            width: 1920,
+            height: 1080,
+            fit: true,
+            center: true,
+            plugins: [
+              // {id: 'visualDebugger', options: {centerV: true}},
+            ]
+          },
+
+
+        ]
+      });
+      player.loadScene('guid_1f98ed80_fedd_4d93_8384_0786baf53f7e');
+    });
+
+  </script>
+
+
+
+
+
+</body>
+
+</html>

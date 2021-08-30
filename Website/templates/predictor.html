@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='/js/script_predictor.js') }}"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <nav class="navbar sticky-top navbar-dark bg-dark"">
+        <div class=" container-fluid">
+        <a class="navbar-brand" href="/">
+            <img src="{{ url_for('static', filename='logo.svg') }}" alt="" width="24" height="30"
+                class="d-inline-block align-text-top">
+            Win Predictor
+        </a>
+        </div>
+    </nav>
+    <title>Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/styles3.css') }}">
+</head>
+
+<body class="bg-dark" style="color: whitesmoke;" >
+    <div class="box" id='loader' style="display: none;">
+        <div >
+          <img  src="{{  url_for('static', filename='loader.gif')  }}">
+        </div>
+    </div>
+    {% block body %}
+    <form class="row g-3" id="form" style="display: flex;">
+        <div class="col-md-4">
+            <label for="validationServer04" class="form-label">Venue</label>
+            <select class="form-select is-invalid other text-info bg-dark"  id="validationServer04" name="Venue"
+                aria-describedby="validationServer04Feedback" required>
+                <option selected disabled value="">Choose...</option>
+                {% for city in venue %}
+                {% if city[0] !="" %}
+                <option>{{ city[0] }} , {{ city[1] }}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+            <div id="validationServer04Feedback" class="invalid-feedback">
+                Please select a valid city
+            </div>
+        </div>
+        <div class="col-md-4 ">
+            <label for="validationServer02" class="form-label">Team 1</label>
+            <select class="form-select is-invalid team1 text-info bg-dark " id="validationServer02" name="Team1"
+                aria-describedby="validationServer02Feedback" required>
+                <option selected disabled value="">Choose...</option>
+                {% for team in teams %}
+                {% if team[0] !="" %}
+                <option value='{{ team[0] }}'>{{ team[0].title() }}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+            <div id="validationServer02Feedback" class="invalid-feedback">
+                Please select valid team
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <label for="validationServer03" class="form-label">Team 2</label>
+            <select class="form-select is-invalid team2 text-info bg-dark" id="validationServer03" name="Team2"
+                aria-describedby="validationServer03Feedback" style="display: none;" required>
+                <option selected disabled value="">Choose...</option>
+                {% for team2 in teams2 %}
+                {% if team2[0] !="" %}
+                <option value='{{ team2[0] }}'>{{ team2[0].title() }}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+            <div id="validationServer03Feedback" class="invalid-feedback">
+                Please select team 1
+            </div>
+        </div>
+        
+        <div class="col-md-4 ">
+            <label for="validationServer11" class="form-label">Include Toss Details?</label>
+            <div class="form-check text-warning bg-dark">
+                <input class="form-check-input" type="radio" name="tosschoice" id="flexRadioDefault3" checked>
+                <label class="form-check-label" for="flexRadioDefault3">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check text-warning bg-dark">
+                <input class="form-check-input" type="radio" name="tosschoice" id="flexRadioDefault4">
+                <label class="form-check-label" for="flexRadioDefault4">
+                    No
+                </label>
+            </div>
+        </div>
+
+        <div class="col-md-4" id="tosswinner">
+            <label for="validationServer06" class="form-label">Toss Winner</label>
+            <select class="form-select is-invalid other text-warning bg-dark" id="validationServer06" name="TossWinner"
+                aria-describedby="validationServer06Feedback" disabled>
+                <option selected disabled value="">Choose...</option>
+            </select>
+            <div id="validationServer06Feedback" class="invalid-feedback">
+                Please select Team 1 and Team 2
+            </div>
+        </div>
+        <div class="col-md-4" id="tossdecision">
+            <label for="validationServer07" class="form-label">Toss Decision</label>
+            <div class="form-check text-warning bg-dark">
+                <input class="form-check-input" type="radio" name="TossDec" id="flexRadioDefault1" checked>
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Bat
+                </label>
+            </div>
+            <div class="form-check text-warning bg-dark">
+                <input class="form-check-input" type="radio" name="TossDec" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Field
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-4">
+            <label for="validationServer08" class="form-label">Umpire 1</label>
+            <select class="form-select is-invalid other text-primary bg-dark" id="validationServer08" name="Umpire1"
+                aria-describedby="validationServer08Feedback" required>
+                <option selected disabled value="">Choose...</option>
+                {% for team2 in umpire1 %}
+                {% if team2[0] !="" %}
+                <option value='{{ team2[0] }}'>{{ team2[0].title() }}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+            <div id="validationServer08Feedback" class="invalid-feedback">
+                Please select a valid option
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label for="validationServer09" class="form-label">Umpire 2</label>
+            <select class="form-select is-invalid other text-primary bg-dark" id="validationServer09" name="Umpire2"
+                aria-describedby="validationServer09Feedback" disabled required>
+                <option selected disabled value="">Choose...</option>
+                {% for team2 in umpire2 %}
+                {% if team2[0] !="" %}
+                <option value='{{ team2[0] }}'>{{ team2[0].title() }}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+            <div id="validationServer09Feedback" class="invalid-feedback">
+                Please select a valid option
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label for="validationServer10" class="form-label">Umpire 3</label>
+            <select class="form-select is-invalid other text-primary bg-dark" id="validationServer10" name="Umpire3"
+                aria-describedby="validationServer10Feedback" disabled required>
+                <option selected disabled value="">Choose...</option>
+                {% for team2 in umpire3 %}
+                {% if team2[0] !="" %}
+                <option value='{{ team2[0] }}'>{{ team2[0].title() }}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+            <div id="validationServer10Feedback" class="invalid-feedback">
+                Please select a valid option
+            </div>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" type="button" id="btn" >Submit form</button>
+        </div>
+    </form>
+    {% endblock %}
+</body>
+
+</html>

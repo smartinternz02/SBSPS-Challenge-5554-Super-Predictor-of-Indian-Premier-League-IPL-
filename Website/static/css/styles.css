@@ -1,0 +1,158 @@
+.circle:hover{
+    font-weight: bold;
+    font-style: normal;
+    font-size: xx-large;
+    z-index: 0;
+    border: 10px solid #ffffff;
+    font-family:'Rubik', sans-serif;
+
+}
+
+
+#circle_1:hover {
+      width: 430px;
+      height: 430px;
+      z-index:1;
+  }
+
+
+#circle_2:hover{
+    width: 430px;
+    height: 430px;
+    background-color: #bd3b66;
+    transform-origin: 150% -200%;
+    z-index:1;
+    
+}
+#hovered
+{
+  background-color: black;
+}
+#circle_3:hover{
+  width: 430px;
+  height: 430px;
+  background-color: #963260;
+  transform: translate(900px, 600px);
+
+  transform-origin: 200% -200%;
+  z-index:1;
+  
+}
+#circle_4:hover{
+  width: 430px;
+  height: 430px;
+  background-color: #a7366e;
+
+  transform: translate(800px,650px);
+  z-index:1;
+  
+}
+#circle_5:hover{
+  width: 430px;
+  height: 430px;
+  background-color: #9e2d69;
+
+  background-color: #bc367d;
+  transform: translate(600px,600px);
+  z-index:1;
+}
+#circle_6:hover{
+  width: 430px;
+  height: 430px;
+  background-color: #dda821;
+
+  transform-origin: -70% 10%;
+  z-index:1;
+  
+}
+#circle_7:hover{
+  width: 430px;
+  height: 430px;
+  background-color: #bb9d09;
+
+  transform-origin: 70% 70%;
+  z-index:1;
+  
+}
+#circle_8:hover{
+  width: 430px;
+  height: 430px;
+  background-color: #869930;
+
+  transform-origin: 70% 70%;
+  z-index:1;
+  
+}
+#circle_9:hover{
+  width: 430px;
+  height: 430px;
+  background-color: #80972e;
+
+  transform-origin: 70% 70%;
+  z-index:1;
+  
+}
+#circle_10:hover{
+  width: 430px;
+  height: 430px;
+  background-color: #9fa523;
+
+  transform-origin: 70% 50%;
+  z-index:1;
+  
+}
+.circle:hover > .showext
+{
+  visibility: visible;
+  display: flex;
+
+} 
+.showext
+{
+  display: none;
+  font-family: 'JetBrains Mono', sans-serif;
+  color: white;
+}
+
+#text1, #text2, #text3, #text4, #text5, #text6, #text7, #text8, #text9, #text10
+{
+  display: flex;
+  position: relative;
+}
+
+
+#text10
+{
+  padding-top: 20px; 
+}
+
+#text9
+{
+  padding-top: 20px;
+}
+
+#text8
+{
+  padding-top: 10px;
+}
+
+
+#text7
+{
+}
+#text6
+{
+}
+
+#text5
+{
+}
+#text4
+{
+}
+#text3
+{
+}
+#text2
+{
+}
