@@ -73,7 +73,7 @@ def call(data):
 			}
 		]
 	}
-	response_scoring = requests.post('https://eu-gb.ml.cloud.ibm.com/ml/v4/deployments/3403e0f6-b50b-469a-b82d-9853e5a5d934/predictions?version=2021-08-28', json=payload_scoring, headers={'Authorization': 'Bearer ' + mltoken})
+	response_scoring = requests.post('https://eu-gb.ml.cloud.ibm.com/ml/v4/deployments/70803dd9-2abc-421a-8320-6683b700f799/predictions?version=2021-08-31', json=payload_scoring, headers={'Authorization': 'Bearer ' + mltoken})
 	response_scoring=response_scoring.json()
 	winner=response_scoring['predictions'][0]
 	winner=winner['values']
