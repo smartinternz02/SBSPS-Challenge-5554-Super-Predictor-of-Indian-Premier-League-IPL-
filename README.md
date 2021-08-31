@@ -14,6 +14,9 @@ The website with the predictor is hosted online on IBM Cloud Foundry. The websit
 
 ## References
 [Logos](https://kreditings.com/ipl-logo-png/)
+
 Website building references - [GeeksforGeeks](https://www.geeksforgeeks.org/) , [Stack Overflow](https://stackoverflow.com/)
+
 [Background Image](https://dribbble.com/shots/9237401-Sports-Illustration-Series-1-Cricket?utm_source=pinterest&utm_campaign=pinterest_shot&utm_content=Sports+Illustration+Series+%231+-+Cricket&utm_medium=Social_Share)
+
 [Loading animation](http://www.codemyui.com)
